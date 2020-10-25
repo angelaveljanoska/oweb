@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    background-color: rgb(138, 140, 143);
+    background-image: linear-gradient(darkgray, lightgray);
 }
 ol, ul {
 	list-style: none;
@@ -46,6 +46,8 @@ table {
 	border-spacing: 0;
 }
 
+/*angela*/
+
 #header 
 {
     height: 60px;
@@ -56,7 +58,7 @@ table {
     height: 100%;
     float: right;
     margin-right: 5%;
-
+    display: flex;
 }
 #header h1{
     float: left;
@@ -66,8 +68,47 @@ table {
     color: white;
 }
 .menu a{
-    line-height: 60px;
+    min-height: 10vh;
     text-transform: uppercase;
     text-decoration: wavy;
     color: rgb(224, 115, 115);
+}
+#pic1 {
+    margin-top: 5vh;
+    margin-left: 8vh;
+    border: 2px solid black;
+}
+#Letter {
+    align-items: left;
+    vertical-align: top;
+    
+    font-size: 150%;
+    font-style: italic;
+    margin-top: 5vh;
+    margin-left: 8vh;
+}
+#l1 {
+    margin-top: 5vh;
+    margin-left: 8vh;
+    border:2px solid black;
+    color: rgb(56, 38, 38);
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+b1 {
+    min-height: 10vh;
+    display: inline-block;
+}
+#list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
 }
