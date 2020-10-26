@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -93,11 +93,8 @@ table {
     border:2px solid black;
     color: rgb(56, 38, 38);
 }
-html {
-    height: 100%;
-}
+
 body {
-    height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -131,8 +128,27 @@ body {
     font-style: italic;
     display: block;
   }
+
   .dropdown-content a:hover {background-color: rgb(85, 74, 74);}
   .dropdown:hover .dropdown-content {display: block;}
   .menu a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(240, 234, 234);
   }
+#maininfo {
+
+    margin-top: 10%;
+    margin-left: 50%;
+    border: solid 2px black;
+    text-align: left;
+}
+.sidebar
+{
+    width: 30%;
+    display:inline-block;
+}
+.article
+{
+    max-width: 69%;
+    display:inline-block;
+    vertical-align: top;
+}
