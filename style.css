@@ -125,7 +125,7 @@ body {
     z-index: 1;
   }
   .dropdown-content a {
-    color: rgb(231, 225, 225);
+    color: rgb(133, 96, 96);
     padding: 15px 19px;
     text-decoration: none;
     font-style: italic;
@@ -134,5 +134,5 @@ body {
   .dropdown-content a:hover {background-color: rgb(85, 74, 74);}
   .dropdown:hover .dropdown-content {display: block;}
   .menu a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(95, 88, 88);
+    background-color: rgb(240, 234, 234);
   }
