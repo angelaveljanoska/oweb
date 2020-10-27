@@ -50,7 +50,7 @@ table {
 
 #header 
 {
-    height: 60px;
+    height: 10vh;
     background-color: rgb(66, 62, 60);
 }
 .menu
@@ -61,14 +61,17 @@ table {
     display: flex;
 }
 #header h1{
+    text-align: center;
     float: left;
-    line-height: 60px;
+    line-height: 10vh;
     margin-left: 5%;
     text-decoration-style: double;
     color: white;
 }
-.menu a{
+.menu button{
     min-height: 10vh;
+    min-width: 9vw;
+    max-width: 9vw;
     text-transform: uppercase;
     text-decoration: wavy;
     color: rgb(224, 115, 115);
@@ -101,7 +104,12 @@ body {
 }
 #b1 {
     min-height: 10vh;
+    max-height: 10vh;
+    min-width: 9vw;
+    max-width: 9vw;
     display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 #list {
     display: flex;
@@ -114,23 +122,30 @@ body {
     display: inline-block;
   }
 .dropdown-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25s linear;
     position: absolute;
-    background-color: #c78a8a;
-    min-width: 125px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    min-width: 9vw;
+    min-height: 5vh;
+    max-height: 5vh;
+  }
+.dropdown-content button {
+    background-color: #ffe0e0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: block;
+    min-height: 5vh;
+    max-height: 5vh;
+    min-width: 9vw;
+    cursor: pointer;
   }
   .dropdown-content a {
-    color: rgb(133, 96, 96);
-    padding: 15px 19px;
-    text-decoration: none;
-    font-style: italic;
-    display: block;
+      text-decoration: none;
   }
 
-  .dropdown-content a:hover {background-color: rgb(85, 74, 74);}
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content button:hover {background-color: rgb(255, 255, 255);}
+  .dropdown:hover .dropdown-content {visibility: visible; opacity: 1;}
   .menu a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(240, 234, 234);
   }
@@ -148,6 +163,7 @@ body {
 }
 .article
 {
+    min-width: 69%;
     max-width: 69%;
     display:inline-block;
     vertical-align: top;
