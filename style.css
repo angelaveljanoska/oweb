@@ -51,7 +51,7 @@ q:before, q:after {
 #header 
 {
     height: 10vh;
-    background-color: rgb(66, 62, 60);
+    background-image: linear-gradient(rgb(212, 143, 143),rgb(92, 84, 84))
 }
 .menu
 {
