@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    background-image: linear-gradient(darkgray, lightgray);
+    background-image: linear-gradient(darkgray, rgb(197, 165, 165));
 }
 ol, ul {
 	list-style: none;
