@@ -121,6 +121,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 999;
   }
 .dropdown-content {
     visibility: hidden;
@@ -274,7 +275,7 @@ body {
     margin-top: 15px;
     transition: all .1s ease-in;
     font-style: oblique;
-    font-family: cursive;
+    font-family: cursive, Arial, Helvetica, sans-serif;
     pointer-events: none;
 }
 
@@ -282,4 +283,44 @@ body {
     transform: scale(1.7);
     visibility: visible;
     opacity: 1;
+}
+
+#video
+{
+    margin:0;
+    border: solid 3px black;
+}
+#paragraph
+{  
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 150px;
+    border: solid 2px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    background-image: linear-gradient(#ffe0e0, white);
+ 
+}
+#more
+{   
+    font-family: cursive;
+    color: rgb(69, 112, 109);
+    text-emphasis-color: black;
+}
+#tb
+{
+    border-collapse: seperate;
+    border-spacing: 15px;
+}
+
+#tdMusic {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+#id
+{
+    z-index: 999;
+    height: 100px;
+    margin-right:50px;
 }
