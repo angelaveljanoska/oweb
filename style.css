@@ -324,3 +324,60 @@ body {
     height: 100px;
     margin-right:50px;
 }
+#name
+{
+    margin:100px;
+    margin-left: 300px;
+    position: absolute;
+}
+#surname
+{
+    margin:100px;
+    margin-left: 500px;
+    position: absolute;
+}
+#city
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top:200px;
+    position: absolute;
+}
+#gender
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top:300px;
+    position: absolute;
+    background-color: whitesmoke;
+}
+#best
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top: 400px;
+    position: absolute;
+    background-color: whitesmoke;
+}
+#rate
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top: 500px;
+    position: absolute;
+    background-color: whitesmoke;
+}
+#opinion
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top:600px;
+    position: absolute;
+}
+#submit
+{
+    margin:100px;
+    margin-left:300px;
+    margin-top:700px;
+    position: absolute;
+}
