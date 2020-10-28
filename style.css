@@ -381,3 +381,8 @@ body {
     margin-top:700px;
     position: absolute;
 }
+#sry
+{
+    background-color: whitesmoke;
+    z-index: 99;
+}
