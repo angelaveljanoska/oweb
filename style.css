@@ -393,3 +393,34 @@ input[type=text]{
 {
     transform: scale(1.05);
 }
+#contact-me
+{
+    position:absolute;
+    font-style: oblique;
+    
+}
+.meals
+{
+    display:block;
+    margin:30px;
+}
+#food
+{
+    width: 500px;
+    height: 500px;
+    border-radius: 1cm;
+    display: inline-block;
+}
+.desc-food
+{   min-width: 500px;
+    display:inline-block;
+    border: solid 2px rosybrown;
+    border-radius: 1cm;
+    padding:20px;
+    background-color: seashell;
+}
+.whole
+{
+    display: flex;
+    justify-content: center;
+}
