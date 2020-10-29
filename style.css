@@ -79,9 +79,7 @@ q:before, q:after {
 #pic1 {
     margin-top: 5vh;
     margin-left: 8vh;
-    border-radius: 1cm;
-    border: 2px  black;
-    
+    border-radius: 1cm;    
 }
 #Letter {
     align-items: left;
@@ -97,7 +95,6 @@ q:before, q:after {
     margin-left: 8vh;
     padding: 70px;
     border-radius: 1cm;
-    border:2px solid black;
     color: rgb(56, 38, 38);
 }
 #CV
@@ -162,11 +159,12 @@ body {
     background-image: linear-gradient(#ffe0e0, white);
     margin-top: 10%;
     margin-left: 50%;
-    margin-right:35%;
+    
     padding: 10px;
+    position:absolute;
     border-radius: 1cm;
-    border: solid 2px black;
     text-align: left;
+    
 }
 .sidebar
 {
