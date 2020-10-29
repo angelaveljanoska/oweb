@@ -324,65 +324,43 @@ body {
     height: 100px;
     margin-right:50px;
 }
-#name
-{
-    margin:100px;
-    margin-left: 300px;
-    position: absolute;
+
+input[type=text]{
+    display:block;
+    margin:20px;
 }
-#surname
-{
-    margin:100px;
-    margin-left: 500px;
-    position: absolute;
-}
-#city
-{
-    margin:100px;
-    margin-left:300px;
-    margin-top:200px;
-    position: absolute;
+.inline-inputs input{
+    display: inline-block;
+    margin:20px;
 }
 #gender
 {
-    margin:100px;
-    margin-left:300px;
-    margin-top:300px;
-    position: absolute;
-    background-color: whitesmoke;
+    display:block;
+    margin:20px;
 }
 #best
 {
-    margin:100px;
-    margin-left:300px;
-    margin-top: 400px;
-    position: absolute;
-    background-color: whitesmoke;
+    display:block;
+    margin:20px;
 }
 #rate
 {
-    margin:100px;
-    margin-left:300px;
-    margin-top: 500px;
-    position: absolute;
-    background-color: whitesmoke;
-}
-#opinion
-{
-    margin:100px;
-    margin-left:300px;
-    margin-top:600px;
-    position: absolute;
+    display:block;
+    margin:20px;
 }
 #submit
 {
-    margin:100px;
-    margin-left:300px;
-    margin-top:700px;
-    position: absolute;
+    display:block;
+    margin:20px;
 }
-#sry
+#survey-form
 {
-    background-color: whitesmoke;
-    z-index: 99;
+    background-color:#ffe0e0;
+    padding: 30px;
+    border-radius: 1cm;
+    width: 30%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }

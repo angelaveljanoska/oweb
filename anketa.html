@@ -16,7 +16,7 @@
                     <a href="./home.html"><button id="b1">Home</button></a>
                 </li>
                 <li>
-                    <a href="./galerija.html"><button id="b1"> Gallery</button><a />
+                    <a href="./galerija.html"><button id="b1"> Gallery</button></a>
                 </li>
                 <li>
                     <div class="dropdown">
@@ -46,68 +46,45 @@
             </ul>
         </nav>
     </div>
-    <div id="sry">
-        <form>
-            <table>
-                <tr>
-                    <td>
-                        <input id="name" type = "text" placeholder="Your Name" required>
-                    </td>
-                    <td>
-                        <input id="surname" type = "text" placeholder="Your Surname" required>
-                    </td>
-                </tr>
-                <tr>
-                    <input id="city" type = "text" placeholder="Your City">
-                </tr>
-                <tr>
-                    <div id="gender">
-                    <label for="Male"> 
-                        <input id="Male" type="radio" name="m-f">Male 
-                    </label>
-                    <label for="Female"> 
-                        <input id="Female" type="radio" name="m-f">Female 
-                    </label>  
-                    </div>              
-                </tr>
-                <tr>
-                    <div id="best">
-                        <p>Choose the parts you like.</p>
-                        <label for="Home"> 
-                            <input id="Home-cb" type="checkbox" name="best">Home
-                        </label>
-                        <label for="Gallery"> 
-                            <input id="Gallery-cb" type="checkbox" name="best">Gallery 
-                        </label>
-                        <label for="Music"> 
-                            <input id="Music-cb" type="checkbox" name="best">Music 
-                        </label>
-                        <label for="Food"> 
-                            <input id="Food-cb" type="checkbox" name="best">Food 
-                        </label>
-                        <label for="Movies"> 
-                            <input id="Movies-cb" type="checkbox" name="best">Movies
-                        </label>
-                        <label for="Blog"> 
-                            <input id="Blog-cb" type="checkbox" name="best">Blog 
-                        </label>
-                    </div>
-                </tr>
-                <tr>
-                    <div id="rate">
-                        <p>Rate us please.</p>
-                        <input type="range" id="rng" name="rate" 
-                        min="0" max="10" value="0" step="1">
-                    </div>
-                </tr>
-                <tr>
-                    <input id="opinion" type = "text" placeholder="Optional comment">
-                </tr>
-                <tr>
-                    <button id="submit" type="submit">Submit</button>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <form id="survey-form">
+            <div class="inline-inputs">
+                <input id="name" type = "text" placeholder="Your Name" required>
+                 <input id="surname" type = "text" placeholder="Your Surname" required>
+            </div>
+                <input id="city" type = "text" placeholder="Your City">
+           
+                <div id="gender">
+                <label for="Male"> Male</label>
+                    <input id="Male" type="radio" name="m-f">
+                <label for="Female"> Female</label>
+                    <input id="Female" type="radio" name="m-f">
+                </div>              
+           
+                <div id="best">
+                    <p>Choose the parts you like.</p>
+                    <label for="Home"> Home</label>
+                        <input id="Home-cb" type="checkbox" name="best">
+                    <label for="Gallery"> Gallery </label>
+                        <input id="Gallery-cb" type="checkbox" name="best">
+                    <label for="Music"> Music</label>
+                        <input id="Music-cb" type="checkbox" name="best">
+                    <label for="Food"> Food</label>
+                        <input id="Food-cb" type="checkbox" name="best">
+                    <label for="Movies"> Movies</label>
+                        <input id="Movies-cb" type="checkbox" name="best">
+                    <label for="Blog"> Blog</label>
+                        <input id="Blog-cb" type="checkbox" name="best">
+                </div>
+                <div id="rate">
+                    <p>Rate us please.</p>
+                    <input type="range" id="rng" name="rate" 
+                    min="0" max="10" value="0" step="1">
+                </div>
+           
+                <input id="opinion" type = "text" placeholder="Optional comment">
+            
+                <button id="submit" type="submit">Submit</button>
+         
+    </form>
 </body>
 </html>
