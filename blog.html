@@ -16,7 +16,7 @@
                     <a href="./home.html"><button id="b1">Home</button></a>
                 </li>
                 <li>
-                    <a href="./galerija.html"><button id="b1"> Gallery</button><a />
+                    <a href="./galerija.html"><button id="b1">Gallery</button></a>
                 </li>
                 <li>
                     <div class="dropdown">
@@ -46,18 +46,12 @@
             </ul>
         </nav>
     </div>
-<form>
-    <div id="blog-form">
-        <div class="blog-f">
-            <textarea id=writing placeholder="Today I feel like writing."></textarea>
-        </div>
-        <div class="blog-f">
-            <input type="text" id="alias" name="alias" placeholder="Alias">
-        </div>
-        <div class="blog-f"><input type="date" id="date-w" name="date-w"
-        value="xxxx-xx-xx"
-        min="2020-01-01" max="2022-12-31"></div>
-    </div>
-</form>
+    <form id="blog-form">
+        <textarea id=writing placeholder="Today I feel like writing."></textarea>
+        <input type="text" class="blog-f" name="alias" placeholder="Alias">
+        <input type="date" class="blog-f" name="date-w" value="xxxx-xx-xx" min="2020-01-01" max="2022-12-31">
+        <button id="submit" type="submit">Submit</button>
+    </form>
 </body>
+
 </html>

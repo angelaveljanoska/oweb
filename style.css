@@ -51,7 +51,9 @@ q:before, q:after {
 #header 
 {
     height: 10vh;
+    width: 100vw;
     background-image: linear-gradient(rgb(165, 146, 146,0.5),rgb(212, 143, 143,0.5));
+    font-size: 15px;
 }
 .menu
 {
@@ -295,21 +297,20 @@ body {
 
 #video
 {
-    margin:0;
+    margin:12px;
     border: solid 3px black;
     border-radius: 1cm;
 }
 #paragraph
 {  
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 408px;
+    max-width: 408px;
     min-height: 150px;
     border: solid 2px black;
     border-radius: 1cm;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 5px;
+    padding: 12px;
     background-image: linear-gradient(#ffe0e0, white);
- 
 }
 #more
 {   
@@ -335,14 +336,6 @@ body {
     margin-right:50px;
 }
 
-input[type=text]{
-    display:block;
-    margin:20px;
-}
-.inline-inputs input{
-    display: inline-block;
-    margin:20px;
-}
 #gender
 {
     display:block;
@@ -378,17 +371,14 @@ input[type=text]{
 {
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     margin-top:100px;
 }
 .contact-icons
-{   
+{
     transition: transform .1s ease-in;
     cursor: pointer;
     width: 120px;
     height: 120px;
-    display: inline-block;
     margin: 10px;
 }
 .contact-icons:hover
@@ -397,13 +387,19 @@ input[type=text]{
 }
 #contact-me
 {
-    position:absolute;
+    position: absolute;
+    left: 50%;
+    width: 740px;
+    margin-left: -370px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    display:flex;
+    justify-items: center;
     font-style: oblique;
-    margin-left: 600px;
-    margin-top:100px;
+    font-size: 22px;
     border-radius: 1cm;
     background-color: seashell;
-    padding:50px;
 }
 .meals
 {
@@ -445,21 +441,20 @@ input[type=text]{
 .text-hover{
     display: flex;
     background-color:seashell;
-    border-radius: 1cm;
-    padding:2px;
-    min-width:300px;
+    min-width:100vw;
     font-style: oblique;
     color: rosybrown;
     justify-content: center;
-    transition: opacity .2s ease-in;
-    visibility: visible;
-    opacity: 1;
 }
+
 #map
 {
     position: absolute;
-    margin-left:820px;
-    margin-top:300px;
+    left: 50%;
+    width: 300px;
+    height: 250px;
+    margin-left: -150px;
+    margin-top:150px;
     border-radius: 1cm;
 }
 #thanking
@@ -482,6 +477,11 @@ input[type=text]{
     padding: 20px;
     color: rosybrown;
 }
+
+#blog-form{
+    display:block;
+}
+
 #blog-body
 {
     background-image: url("./book.jpg");
@@ -489,15 +489,68 @@ input[type=text]{
 }
 #writing
 {
-    height: 550px;
-    width: 550px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 300px;
+    width: 250px;
     border: solid 2px rosybrown; 
     border-radius: 1cm;
-    margin-left: 50px;
-    margin-top: 50px;
     padding: 30px;
 }
-#blog-f
-{
+
+.blog-f{
     display: block;
+    margin: 10px;
+}
+
+.movieImg {
+    width: 300px;
+    height: 450px;
+    border: solid 2px black;
+    border-radius: 1cm;
+    transition: transform .1s ease-in;
+}
+
+.movie-container {
+    margin: 100px;
+    display: inline-block;
+}
+
+.movieP {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 426px;
+    max-height: 426px;
+    border: solid 2px black;
+    border-radius: 1cm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px;
+    background-image: linear-gradient(#ffe0e0, white);
+    transition: opacity 0.1s ease-in;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.movie-container a:hover .movieImg {
+    transform: scale(1.02);
+}
+
+.movie-container a:hover ~ .movieP {
+    visibility: visible;
+    opacity: 1;
+}
+#netflix
+{
+    border-radius: 1cm;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+#trailer
+{
+    border-radius: 1cm;
 }
