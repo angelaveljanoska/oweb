@@ -79,13 +79,14 @@ q:before, q:after {
 #pic1 {
     margin-top: 5vh;
     margin-left: 8vh;
-    border: 2px solid black;
+    border-radius: 1cm;
+    border: 2px  black;
+    
 }
 #Letter {
     align-items: left;
     vertical-align: top;
-    
-    font-size: 150%;
+    font-size: 200%;
     font-style: italic;
     margin-top: 5vh;
     margin-left: 8vh;
@@ -94,10 +95,16 @@ q:before, q:after {
     background-image: linear-gradient(#ffe0e0, white);
     margin-top: 5vh;
     margin-left: 8vh;
+    padding: 70px;
+    border-radius: 1cm;
     border:2px solid black;
     color: rgb(56, 38, 38);
 }
-
+#CV
+{
+    color: black;
+    font-style: bold;
+}
 body {
     margin: 0;
     background-repeat: no-repeat;
@@ -155,6 +162,9 @@ body {
     background-image: linear-gradient(#ffe0e0, white);
     margin-top: 10%;
     margin-left: 50%;
+    margin-right:35%;
+    padding: 10px;
+    border-radius: 1cm;
     border: solid 2px black;
     text-align: left;
 }
