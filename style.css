@@ -491,6 +491,8 @@ input[type=text]{
 {
     height: 550px;
     width: 550px;
+    border: solid 2px rosybrown; 
+    border-radius: 1cm;
 }
 #blog-form
 {
