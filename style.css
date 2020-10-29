@@ -458,3 +458,23 @@ input[type=text]{
     margin-top:400px;
     border-radius: 1cm;
 }
+#thanking
+{
+    position: absolute;
+    margin-left:600px;
+    margin-top:300px;
+    border-radius: 1cm;
+    background-color: rosybrown;
+    padding:50px;
+}
+#done
+{
+    font-style: italic;
+    border-radius: 1cm;
+    background-color: seashell;
+    position: absolute;
+    margin-top: 700px;
+    margin-left:700px;
+    padding: 20px;
+    color: rosybrown;
+}
