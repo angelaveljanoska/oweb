@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body class="home">
+<body class="home" id="blog-body">
     <div id="header">
         <h1> Welcome to my life </h1>
         <nav class="menu">
@@ -46,6 +46,14 @@
             </ul>
         </nav>
     </div>
-<p>Helou</p>
+<form>
+    <div id="blog-form">
+        <input type="text" id="writing" name="writing" placeholder="Today i feel like writing.">
+        <input type="text" id="alias" name="alias" placeholder="Alias">
+        <input type="date" id="date-w" name="date-w"
+           value="xxxx-xx-xx"
+           min="2020-01-01" max="2022-12-31">
+    </div>
+</form>
 </body>
 </html>
