@@ -428,13 +428,28 @@ input[type=text]{
     display: flex;
     justify-content: center;
 }
-.food:hover
+.food:hover~.desc-food
 {
     transform: scale(1.05);
     cursor: pointer;
-}
-.food:click .desc-food
-{
     visibility: visible;
     opacity: 1;
+}
+.text-hover{
+    display: flex;
+    background-color:seashell;
+    border-radius: 1cm;
+    padding:2px;
+    min-width:300px;
+    font-style: oblique;
+    color: rosybrown;
+    justify-content: center;
+    transition: all .2s ease-in;
+    visibility: visible;
+    opacity: 1;
+}
+.food:hover~.text-hover
+{  
+    visibility: hidden;
+    opacity:0;
 }
