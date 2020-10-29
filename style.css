@@ -493,8 +493,11 @@ input[type=text]{
     width: 550px;
     border: solid 2px rosybrown; 
     border-radius: 1cm;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 30px;
 }
-#blog-form
+#blog-f
 {
-    display: inline-block;
+    display: block;
 }
