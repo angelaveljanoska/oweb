@@ -412,7 +412,7 @@ input[type=text]{
     display: inline-block;
 }
 .desc-food
-{   min-width: 300px;
+{   min-width: 400px;
     display:inline-block;
     border: solid 2px rosybrown;
     border-radius: 1cm;
