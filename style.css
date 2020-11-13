@@ -269,10 +269,16 @@ body {
     z-index: 500;
     margin-left: 330px;
     transition: transform .1s ease-in;
+    cursor: pointer;
 }
 
 .heart:hover {
     transform: scale(1.55);
+}
+
+.heart:active
+{
+    transform: scale(1.30);
 }
 
 .liketext {
@@ -293,6 +299,10 @@ body {
     transform: scale(1.7);
     visibility: visible;
     opacity: 1;
+}
+
+.heart:active ~ .liketext{
+    transform: scale(1.426);
 }
 
 #video
@@ -553,4 +563,20 @@ body {
 #trailer
 {
     border-radius: 1cm;
+}
+#likeCounter1
+{
+    font-size: 40px;
+    float: right;
+    margin-right: 90px;
+}
+#likeCounter2
+{
+    font-size: 40px;
+    float: right;
+    margin-right: 90px;
+}
+#box
+{
+    background-color: seashell;
 }

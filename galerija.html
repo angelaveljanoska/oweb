@@ -2,12 +2,13 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
     <title>OWEB</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body id="gallery" class="home">
+<body onload="onLoad()" id="gallery" class="home">
     <div id="header">
         <h1> Welcome to my life </h1>
         <nav class="menu">
@@ -54,21 +55,95 @@
                 <img id="images" src="./coffee.jpg" />
                 <div id="picdesc">
                     <h2 id="desc">#coffee #coffeelover</h2>
-                    <img src="./heart.png" class="heart" />
+                    <img onclick="handleClick()" id="clickme1" src="./heart.png" class="heart" name="button1" />
                     <h5 class="liketext">Like</h5>
+                    <p id="likeCounter1">0</p>
+                </div>
+
+                <div id="box">
+                    <p id="comment1"></p>
+                    <form onsubmit="comment1()">
+                        <input type="text" id="input1" placeholder="Enter comment" autocapitalize="off" />
+                        <input type="submit" id="submitbutton" value="Add comment">
+                    </form>
                 </div>
             </td>
             <td id="tabledata">
                 <h3 class="invistext1">@nikolatesla</h3>
                 <img id="images" src="./work.jpg" />
                 <div id="picdesc">
-                    <h2 id="desc">#work #coding #html #css</h2>
-                    <img src="./heart.png" class="heart" />
+                    <h2 id="desc">#work #coding</h2>
+                    <img onclick="handleClick()" id="clickme2" src="./heart.png" class="heart" name="button2" />
                     <h5 class="liketext">Like</h5>
+                    <p id="likeCounter2">0</p>
+                </div>
+
+                <div id="box">
+                    <p id="comment2"></p>
+                    <form onsubmit="comment2()">
+                        <input type="text" id="input2" placeholder="Enter comment" autocapitalize="off" />
+                        <input type="submit" id="submitbutton" value="Add comment">
+                    </form>
                 </div>
             </td>
         </tr>
     </table>
+    <script type="text/javascript">
+        const button1 = document.getElementById("clickme1")
+        const button2 = document.getElementById("clickme2")
+        let count1 = 0
+        let count2 = 0
+        const likeCounter1 = document.getElementById("likeCounter1")
+        const likeCounter2 = document.getElementById("likeCounter2")
+        const handleClick = () => {
+            const buttonName = event.target.name
+            console.log(buttonName)
+            if (buttonName === "button1") {
+                count1 += 1
+                likeCounter1.innerHTML = count1
+                console.log("handleclick, count = " + count1)
+            }
+            if (buttonName === "button2") {
+                count2 += 1
+                likeCounter2.innerHTML = count2
+                console.log("handleclick, count = " + count2)
+            }
+        }
+        const onLoad = () => {
+            let arr1 = []
+            localStorage.setItem('comments1', JSON.stringify(arr1))
+            let arr2 = []
+            localStorage.setItem('comments2', JSON.stringify(arr2))
+        }
+        function comment1() {
+            event.preventDefault()
+            let t1 = document.getElementById("input1").value;
+            let comm1 = JSON.parse(localStorage.getItem('comments1'))
+            comm1.push(t1)
+            localStorage.setItem('comments1', JSON.stringify(comm1))
+            console.log(comm1)
+            let newString1 = ""
+            comm1.forEach(element => {
+                newString1 += element
+                newString1 += "<br>"
+            });
+            document.getElementById("comment1").innerHTML = newString1;
+        }
+        function comment2() {
+            event.preventDefault()
+            let t2 = document.getElementById("input2").value;
+            let comm2 = JSON.parse(localStorage.getItem('comments2'))
+            comm2.push(t2)
+            localStorage.setItem('comments2', JSON.stringify(comm2))
+            console.log(comm2)
+            let newString2 = ""
+            comm2.forEach(element => {
+                newString2 += element
+                newString2 += "<br>"
+            });
+            document.getElementById("comment2").innerHTML = newString2;
+        }
+    </script>
 </body>
 
 </html>
