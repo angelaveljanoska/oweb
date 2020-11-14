@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>OWEB</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -82,14 +82,23 @@
             <p>Rate us please.</p>
             <input type="range" id="rng" name="rate" min="0" max="10" value="0" step="1">
         </div>
-        
+
         <input id="opinion" type="text" placeholder="Optional comment">
 
-        <a href="./thanks.html"><button id="submit" type="submit">Submit</button></a>
+        <button onclick="sendSurvey()" id="submit" type="submit">Submit</button>
 
     </form>
-    <a id="done" href="./thanks.html">I am done with this survey.</a>
-    <!-- /*ideata e koga ke se klikne na submit da se otvora thanks.html, no kako zamena e I am done*/-->
+    <p id="thanks">
+    </p>
+    <script>
+        const sendSurvey = () => {
+            event.preventDefault()
+            var name = document.getElementById("name").value;          
+            var surname = document.getElementById("surname").value;
+            var result = 'Thank you for your contribution ' + name + ' ' + surname + '. Your opinion means a lot to us!';
+            document.getElementById('thanks').textContent = result;
+        }
+    </script>
 </body>
 
 </html>
