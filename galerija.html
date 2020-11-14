@@ -86,6 +86,16 @@
                     </form>
                 </div>
             </td>
+            <td id="tabledata">
+                <img id="images" class="addPhoto" src="" />
+
+                <div id="picdesc">
+                    <form onsubmit="handleAdd()">
+                <input type="file" id="myFile" accept="image/*" name="image">
+                <input type="submit" value="Add photo">
+                </form>
+            </div>
+            </td>
         </tr>
     </table>
     <script type="text/javascript">
@@ -142,6 +152,19 @@
                 newString2 += "<br>"
             });
             document.getElementById("comment2").innerHTML = newString2;
+        }
+        const handleAdd = () => {
+            event.preventDefault()
+            let image = document.getElementsByClassName("addPhoto")[0]
+            let files = document.getElementById('myFile')
+            const file = files.files[0]
+            const reader = new FileReader()
+            reader.readAsDataURL(file)
+            console.log("before onload")
+            reader.onload = () => {
+                console.log(reader.result)
+                image.src = reader.result
+            }
         }
     </script>
 </body>
