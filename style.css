@@ -553,15 +553,21 @@ body {
     visibility: visible;
     opacity: 1;
 }
-#netflix
+.netflix
 {
     border-radius: 1cm;
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    transition: transform .1s ease-in;
+}
+
+.netflix:hover{
+    transform:  scale(1.03) translate(-50%,-50%);
 
 }
+
 #trailer
 {
     border-radius: 1cm;
@@ -621,4 +627,11 @@ body {
     border-radius: 1cm;
     padding: 20px;
     margin-bottom: 20px;
+}
+#clock
+{
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 500px;
 }
