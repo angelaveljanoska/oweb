@@ -2,13 +2,24 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>OWEB</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $("#rss-feeds").rss("http://www.publicist.mk/rss",
+                {
+                    entryTemplate: '<div class="newsContent"><a href="{url}">{title}</a><br/>{teaserImage}{shortBodyPlain}</div>',
+                    limit: 2
+                });
+        });
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 
-<body class="home" id="blog-body">
+<body class="home" id="blog-body" onload="onLoad()">
     <div id="header">
         <h1> Welcome to my life </h1>
         <nav class="menu">
@@ -47,12 +58,49 @@
             </ul>
         </nav>
     </div>
-    <form id="blog-form">
-        <textarea id=writing placeholder="Today I feel like writing."></textarea>
-        <input type="text" class="blog-f" name="alias" placeholder="Alias">
-        <input type="date" class="blog-f" name="date-w" value="xxxx-xx-xx" min="2020-01-01" max="2022-12-31">
-        <button id="submit" type="submit">Submit</button>
-    </form>
+    <div id="elementiBlog">
+        <form id="blog-form" onsubmit="blogPost()">
+            <textarea id="blogTxt" class="writing" placeholder="Today I feel like writing."></textarea>
+            <input id="blogAlias" type="text" class="blog-f" name="alias" placeholder="Alias">
+            <input id="blogSbj" type="text" class="blog-f" name="subject" placeholder="Subject">
+            <input id="blogDate" type="date" class="blog-f" name="date-w" value="xxxx-xx-xx" min="2020-01-01"
+                max="2022-12-31">
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <div id="submittedDiv">
+
+        </div>
+        <div id="news">
+            <p id="what">What is new today?</p>
+            <div id="rss-feeds">
+            </div>
+        </div>
+    </div>
+    <script>
+        const onLoad = () => {
+            let arr = []
+            localStorage.setItem('posts', JSON.stringify(arr))
+        }
+        function blogPost() {
+            event.preventDefault()
+            let blogTxt = document.getElementById("blogTxt").value
+            let blogAlias = document.getElementById("blogAlias").value
+            let blogSbj = document.getElementById("blogSbj").value
+            let blogDate = document.getElementById("blogDate").value
+            let submittedDiv = document.getElementById("submittedDiv")
+            let posts = JSON.parse(localStorage.getItem('posts'))
+            let htmlString = "<p> Subject:" + blogSbj + "</p>" + '<p style="word-wrap: break-word;"> Content: ' + blogTxt + "</p>" + "<p> Written by: " + blogAlias + "</p>" + "<p> Date:" + blogDate + "</p>"
+            posts.push(htmlString)
+            localStorage.setItem('posts', JSON.stringify(posts))
+            let newString = ""
+            posts.forEach(element => {
+                newString += element
+                newString += "<hr>"
+            });
+            submittedDiv.innerHTML = newString
+            console.log("posts = " + posts)
+        }
+    </script>
 </body>
 
 </html>

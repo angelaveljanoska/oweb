@@ -187,8 +187,7 @@ body {
 }
 #gallery
 {
-    background-image: url("./gallerypic.png");
-    background-size: cover;
+    
 }
 
 #images {
@@ -403,7 +402,7 @@ body {
     margin-left: -370px;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 5px;
+    padding: 15px;
     display:flex;
     justify-items: center;
     font-style: oblique;
@@ -415,6 +414,7 @@ body {
 {
     display:block;
     margin:30px;
+
 }
 .food
 {
@@ -425,7 +425,7 @@ body {
 }
 .desc-food
 {   
-    min-width: 20vw;
+    min-width: 17.5vw;
     display:inline-block;
     border: solid 2px rosybrown;
     border-radius: 1cm;
@@ -437,9 +437,13 @@ body {
 }
 .whole
 {
-    margin-left: 5vw;
-    display: flex;
-    justify-content: center;
+    margin-left: 13.5vw;
+    margin-right: 10vw;
+    max-width: 74vw;
+    margin-top: 50px;
+    background-image: linear-gradient(rgb(236, 188, 188),white);
+    border-radius: 1cm;
+    border: solid 2px rgb(197, 139, 139);
 }
 .food:hover ~ .desc-food
 {
@@ -461,9 +465,9 @@ body {
 {
     position: absolute;
     left: 50%;
-    width: 300px;
-    height: 250px;
-    margin-left: -150px;
+    transform: translatex(-50%);
+    width: 500px;
+    height: 400px;
     margin-top:150px;
     border-radius: 1cm;
 }
@@ -493,10 +497,9 @@ body {
 
 #blog-body
 {
-    background-image: url("./book.jpg");
-    background-size: cover;
+   
 }
-#writing
+.writing
 {
     margin-top: 10px;
     margin-left: 10px;
@@ -578,4 +581,44 @@ body {
 #box
 {
     background-color: seashell;
+}
+#elementiBlog
+{
+    display: flex;
+    margin-top: 50px;
+}
+#submittedDiv
+{   margin-left: 50px;
+    margin-right: 200px;
+    background-color: rgb(196, 144, 165);
+    border-radius: 1cm;
+    padding: 20px;
+    min-width: 25vw;
+    max-width: 25vw;
+}
+#news
+{   float:right;
+    background-color: rgb(233, 224, 207,0.4);
+    padding: 20px;
+    border-radius: 1cm;
+    max-width: 30%;
+    margin-left: 200px;
+}
+#what
+{
+    font-family: cursive;
+    font-size: 50px;
+    color: rgb(189, 154, 154)
+}
+.newsContent img
+{
+    width: 50%;
+    height: auto;
+    display:block;
+}
+.newsContent{
+    background: rgba(255,255,255,0.4);
+    border-radius: 1cm;
+    padding: 20px;
+    margin-bottom: 20px;
 }

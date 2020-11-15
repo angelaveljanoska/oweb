@@ -91,10 +91,10 @@
 
                 <div id="picdesc">
                     <form onsubmit="handleAdd()">
-                <input type="file" id="myFile" accept="image/*" name="image">
-                <input type="submit" value="Add photo">
-                </form>
-            </div>
+                        <input type="file" id="myFile" accept="image/*" name="image">
+                        <input type="submit" value="Add photo">
+                    </form>
+                </div>
             </td>
         </tr>
     </table>
@@ -135,7 +135,7 @@
             let newString1 = ""
             comm1.forEach(element => {
                 newString1 += element
-                newString1 += "<br>"
+                newString1 += "<hr>"
             });
             document.getElementById("comment1").innerHTML = newString1;
         }
@@ -149,7 +149,7 @@
             let newString2 = ""
             comm2.forEach(element => {
                 newString2 += element
-                newString2 += "<br>"
+                newString2 += "<hr>"
             });
             document.getElementById("comment2").innerHTML = newString2;
         }
