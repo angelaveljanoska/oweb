@@ -160,10 +160,10 @@ body {
 #maininfo {
     background-image: linear-gradient(#ffe0e0, white);
     margin-top: 10%;
-    margin-left: 50%;
-    
     padding: 10px;
-    position:absolute;
+    width: fit-content;
+    float: right;
+    margin-right: 10%;
     border-radius: 1cm;
     text-align: left;
     
@@ -474,10 +474,12 @@ body {
 #thanks
 {
     position: absolute;
-    margin: 700px;
     border-radius: 1cm;
     background-color: rosybrown;
     padding:50px;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
 }
 #done
 {
@@ -493,6 +495,7 @@ body {
 
 #blog-form{
     display:block;
+    width: 30%;
 }
 
 #blog-body
@@ -594,21 +597,18 @@ body {
     margin-top: 50px;
 }
 #submittedDiv
-{   margin-left: 50px;
-    margin-right: 200px;
+{ 
     background-color: rgb(196, 144, 165);
     border-radius: 1cm;
     padding: 20px;
-    min-width: 25vw;
-    max-width: 25vw;
+    width: 30%;
 }
 #news
-{   float:right;
+{  
     background-color: rgb(233, 224, 207,0.4);
     padding: 20px;
     border-radius: 1cm;
-    max-width: 30%;
-    margin-left: 200px;
+    width: 30%;
 }
 #what
 {
@@ -634,4 +634,7 @@ body {
     left: 50%;
     transform: translatex(-50%);
     margin-top: 500px;
+}
+#imageAdded{
+    width: 400px;
 }
