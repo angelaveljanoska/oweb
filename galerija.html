@@ -119,17 +119,8 @@
             }
         }
         const onLoad = () => {
-            if (window.localStorage.length != 0) {
-                let i;
-                for (i = 0; i < window.localStorage.length; i++) {
-                    JSON.parse(window.localStorage.getItem('comments1'));
-                    JSON.parse(window.localStorage.getItem('comments2'));
-                }
-            }
-            let arr1 = []
-            localStorage.setItem('comments1', JSON.stringify(arr1))
-            let arr2 = []
-            localStorage.setItem('comments2', JSON.stringify(arr2))
+            if (localStorage.getItem('comment1'))
+                document.getElementById("comm1").innerHTML = JSON.parse(localStorage.getItem('comment1'));
         }
         function comment1() {
             event.preventDefault()
