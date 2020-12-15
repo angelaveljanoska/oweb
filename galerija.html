@@ -93,6 +93,7 @@
                         <input type="submit" value="Add photo">
                     </form>
                 </div>
+
             </td>
         </tr>
     </table>
@@ -118,6 +119,13 @@
             }
         }
         const onLoad = () => {
+            if (window.localStorage.length != 0) {
+                let i;
+                for (i = 0; i < window.localStorage.length; i++) {
+                    JSON.parse(window.localStorage.getItem('comments1'));
+                    JSON.parse(window.localStorage.getItem('comments2'));
+                }
+            }
             let arr1 = []
             localStorage.setItem('comments1', JSON.stringify(arr1))
             let arr2 = []

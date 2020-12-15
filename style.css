@@ -118,6 +118,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 #list {
     display: flex;
     align-items: center;
@@ -582,6 +583,12 @@ body {
     margin-right: 90px;
 }
 #likeCounter2
+{
+    font-size: 40px;
+    float: right;
+    margin-right: 90px;
+}
+#likeCounter3
 {
     font-size: 40px;
     float: right;
