@@ -186,13 +186,10 @@ body {
     background-image: url("./musicpic.jpg");
     background-size: cover;
 }
-#gallery
-{
-    
-}
 
 #images {
-    width: 400px;
+    float: top;
+    width: 397px;
     height: 400px;
 }
 
@@ -213,6 +210,8 @@ body {
 #tabledata {
     border: solid 2px black;
     transition: transform .2s ease-in;
+    word-wrap: break-word;
+    max-width: 397px;
 }
 
 #tabledata:hover{
@@ -258,6 +257,7 @@ body {
 }
 
 #desc {
+    max-width: 397px;
     font-weight: lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -676,6 +676,11 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(228, 163, 173);
     color:white;
+
+}
+.c1
+{
+    word-wrap: break-word;
 }
 #comment2
 {

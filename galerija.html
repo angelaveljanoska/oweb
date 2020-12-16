@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body onload="onLoad()" id="gallery" class="home">
+<body onload="onLoad()" class="home">
     <div id="header">
         <h1> Welcome to my life </h1>
         <nav class="menu">
@@ -61,7 +61,7 @@
                 </div>
 
                 <div id="box">
-                    <p id="comment1"></p>
+                    <p id="comment1" class="c1"></p>
                     <form onsubmit="comment1()">
                         <input type="text" id="input1" placeholder="Enter comment" autocapitalize="off" />
                         <input type="submit" id="submitbutton" value="Add comment">
@@ -120,25 +120,32 @@
             }
         }
         const onLoad = () => {
-            if (localStorage.getItem('comments1'))
-
-                var json1 = JSON.parse(localStorage.getItem('comments1'));
-            let string1 = "";
-            for (var i = 0; i < json1.length; i++) {
-                var obj1 = json1[i];
-                let st1 = JSON.stringify(obj1);
-                string1 += st1;
-                string1 += "<hr>";
+            let json1 = [];
+            let json2 = [];
+            let string1="";
+            let string2="";
+            if (localStorage.getItem('comments1')) {
+                json1 = JSON.parse(localStorage.getItem('comments1'));
+                string1 = "";
+                for (var i = 0; i < json1.length; i++) {
+                    var obj1 = json1[i];
+                    let st1 = JSON.stringify(obj1);
+                    string1 += st1;
+                    string1 += "<hr>";
+                }
             }
-            if (localStorage.getItem('comments2'))
+            if (localStorage.getItem('comments2')) {
 
-                var json2 = JSON.parse(localStorage.getItem('comments2'));
-            let string2 = "";
-            for (var i = 0; i < json2.length; i++) {
-                var obj2 = json2[i];
-                let st2 = JSON.stringify(obj2);
-                string2 += st2;
-                string2 += "<hr>";
+                json2 = JSON.parse(localStorage.getItem('comments2'));
+                console.log(json2);
+                string2 = "";
+                for (var i = 0; i < json2.length; i++) {
+                    var obj2 = json2[i];
+                    let st2 = JSON.stringify(obj2);
+                    string2 += st2;
+                    str
+                    ing2 += "<hr>";
+                }
             }
             document.getElementById("comment1").innerHTML = string1;
             document.getElementById("comment2").innerHTML = string2;
@@ -146,9 +153,9 @@
         function comment1() {
             event.preventDefault()
             let t1 = document.getElementById("input1").value;
-            let comm1 = JSON.parse(localStorage.getItem('comments1'))
+            let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
             var datum1 = new Date();
-            t1 = guest + ':' + t1 + ' ' + datum1.toUTCString();
+            t1 = guest + ': ' + t1 + '<br>' + datum1.toUTCString();
             comm1.push(t1)
             localStorage.setItem('comments1', JSON.stringify(comm1))
             console.log(comm1)
@@ -162,9 +169,9 @@
         function comment2() {
             event.preventDefault()
             let t2 = document.getElementById("input2").value;
-            let comm2 = JSON.parse(localStorage.getItem('comments2'))
+            let comm2 = JSON.parse(localStorage.getItem('comments2')) || [];
             var datum2 = new Date();
-            t2 = guest + ':' + t2 + ' ' + datum2.toUTCString();
+            t2 = guest + ': ' + t2 + '<br>' + datum2.toUTCString();
             comm2.push(t2)
             localStorage.setItem('comments2', JSON.stringify(comm2))
             console.log(comm2)

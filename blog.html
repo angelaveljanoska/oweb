@@ -79,7 +79,13 @@
     <script>
         const onLoad = () => {
             let arr = []
-            localStorage.setItem('posts', JSON.stringify(arr))
+            arr = JSON.parse(localStorage.getItem('posts'))
+            let tempString = "";
+            arr.forEach(element => {
+                tempString += element
+                tempString += "<hr>"
+            })
+            submittedDiv.innerHTML = tempString;
         }
         function blogPost() {
             event.preventDefault()
