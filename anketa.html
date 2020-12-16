@@ -91,6 +91,9 @@
     <p id="thanks">
     </p>
     <script>
+        
+            window.alert("Please fill out this form.");
+        
         const sendSurvey = () => {
             event.preventDefault()
             var name = document.getElementById("name").value;          
@@ -98,6 +101,7 @@
             var result = 'Thank you for your contribution ' + name + ' ' + surname + '. Your opinion means a lot to us!';
             document.getElementById('thanks').textContent = result;
         }
+  
     </script>
 </body>
 

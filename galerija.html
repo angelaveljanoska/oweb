@@ -98,6 +98,7 @@
         </tr>
     </table>
     <script type="text/javascript">
+        var guest = prompt("Hello? Is there anybody in there?", "Your name here");
         const button1 = document.getElementById("clickme1")
         const button2 = document.getElementById("clickme2")
         let count1 = 0
@@ -119,13 +120,35 @@
             }
         }
         const onLoad = () => {
-            if (localStorage.getItem('comment1'))
-                document.getElementById("comm1").innerHTML = JSON.parse(localStorage.getItem('comment1'));
+            if (localStorage.getItem('comments1'))
+
+                var json1 = JSON.parse(localStorage.getItem('comments1'));
+            let string1 = "";
+            for (var i = 0; i < json1.length; i++) {
+                var obj1 = json1[i];
+                let st1 = JSON.stringify(obj1);
+                string1 += st1;
+                string1 += "<hr>";
+            }
+            if (localStorage.getItem('comments2'))
+
+                var json2 = JSON.parse(localStorage.getItem('comments2'));
+            let string2 = "";
+            for (var i = 0; i < json2.length; i++) {
+                var obj2 = json2[i];
+                let st2 = JSON.stringify(obj2);
+                string2 += st2;
+                string2 += "<hr>";
+            }
+            document.getElementById("comment1").innerHTML = string1;
+            document.getElementById("comment2").innerHTML = string2;
         }
         function comment1() {
             event.preventDefault()
             let t1 = document.getElementById("input1").value;
             let comm1 = JSON.parse(localStorage.getItem('comments1'))
+            var datum1 = new Date();
+            t1 = guest + ':' + t1 + ' ' + datum1.toUTCString();
             comm1.push(t1)
             localStorage.setItem('comments1', JSON.stringify(comm1))
             console.log(comm1)
@@ -140,6 +163,8 @@
             event.preventDefault()
             let t2 = document.getElementById("input2").value;
             let comm2 = JSON.parse(localStorage.getItem('comments2'))
+            var datum2 = new Date();
+            t2 = guest + ':' + t2 + ' ' + datum2.toUTCString();
             comm2.push(t2)
             localStorage.setItem('comments2', JSON.stringify(comm2))
             console.log(comm2)

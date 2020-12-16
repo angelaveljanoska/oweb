@@ -89,7 +89,7 @@
             let blogDate = document.getElementById("blogDate").value
             let submittedDiv = document.getElementById("submittedDiv")
             let posts = JSON.parse(localStorage.getItem('posts'))
-            let htmlString = "<p id="blogtekst"> Subject:" + blogSbj + "</p>" + '<p style="word-wrap: break-word;"> Content: ' + blogTxt + "</p>" + "<p> Written by: " + blogAlias + "</p>" + "<p> Date:" + blogDate + "</p>"
+            let htmlString = "<p id='subject'> Title:" + blogSbj + "</p>" + '<p id="content" style="word-wrap: break-word;">' + blogTxt + "</p>" + "<p id='ime'> Written by: " + blogAlias + "</p>" + "<p id='date'> Date:" + blogDate + "</p>"
             posts.push(htmlString)
             localStorage.setItem('posts', JSON.stringify(posts))
             let newString = ""
