@@ -79,7 +79,7 @@
     <script>
         const onLoad = () => {
             let arr = []
-            arr = JSON.parse(localStorage.getItem('posts'))
+            arr = JSON.parse(localStorage.getItem('posts')) || [];
             let tempString = "";
             arr.forEach(element => {
                 tempString += element
@@ -94,7 +94,7 @@
             let blogSbj = document.getElementById("blogSbj").value
             let blogDate = document.getElementById("blogDate").value
             let submittedDiv = document.getElementById("submittedDiv")
-            let posts = JSON.parse(localStorage.getItem('posts'))
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
             let htmlString = "<p id='subject'> Title:" + blogSbj + "</p>" + '<p id="content" style="word-wrap: break-word;">' + blogTxt + "</p>" + "<p id='ime'> Written by: " + blogAlias + "</p>" + "<p id='date'> Date:" + blogDate + "</p>"
             posts.push(htmlString)
             localStorage.setItem('posts', JSON.stringify(posts))
