@@ -209,7 +209,7 @@ body {
 }
 
 #tabledata {
-    border: solid 2px black;
+    
     transition: transform .2s ease-in;
     word-wrap: break-word;
     max-width: 397px;
