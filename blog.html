@@ -67,6 +67,10 @@
                 max="2022-12-31">
             <button id="submit" type="submit">Submit</button>
         </form>
+        <div>
+            <input type="number" id="postNumber" placeholder="Post number">
+            <button onClick="handleDelete()">Delete</button>
+        </div>
         <div id="submittedDiv">
 
         </div>
@@ -85,8 +89,31 @@
                 tempString += element
                 tempString += "<hr>"
             })
-            submittedDiv.innerHTML = tempString;
+            document.getElementById("submittedDiv").innerHTML = tempString;
         }
+        const handleDelete = () => {
+            const postId = document.getElementById("postNumber").value;
+            console.log("postNumber:" + postId);
+            let posts = JSON.parse(localStorage.getItem('posts')) || [];
+            if (posts.length === 0) {
+                window.alert("Nema postovi za brishenje.");
+                return;
+            }
+            if (postId > posts.length || postId < 1) {
+                window.alert("Postot ne postoi.");
+                return;
+            }
+            posts.splice(postId - 1, 1);
+            let tempString = "";
+            posts.forEach(element => {
+                tempString += element
+                tempString += "<hr>"
+            })
+            console.log("posle foreach");
+            localStorage.setItem('posts', JSON.stringify(posts));
+            document.getElementById("submittedDiv").innerHTML = tempString;
+        }
+
         function blogPost() {
             event.preventDefault()
             let blogTxt = document.getElementById("blogTxt").value
