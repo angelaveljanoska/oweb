@@ -50,7 +50,7 @@
 
     <table id="table1">
         <tr>
-            <td id="tabledata">
+            <td id="tabledata" style="text-align: left; vertical-align: top">
                 <h3 class="invistext2">@bravocaffe</h3>
                 <img id="images" src="./coffee.jpg" />
                 <div id="picdesc">
@@ -68,7 +68,7 @@
                     </form>
                 </div>
             </td>
-            <td id="tabledata">
+            <td id="tabledata" style="text-align: left; vertical-align: top; ">
                 <h3 class="invistext1">@nikolatesla</h3>
                 <img id="images" src="./work.jpg" />
                 <div id="picdesc">
@@ -86,7 +86,7 @@
                     </form>
                 </div>
             </td>
-            <td id="tabledata" class="addPhoto">
+            <td id="tabledata" class="addPhoto" style="text-align: left; vertical-align: top; ">
                 <div id="picdesc">
                     <form onsubmit="handleAdd()">
                         <input type="file" id="myFile" accept="image/*" name="image">
@@ -112,6 +112,7 @@
                 count1 += 1
                 likeCounter1.innerHTML = count1
                 console.log("handleclick, count = " + count1)
+                localStorage.setItem('likes', JSON.stringify(document.getElementById('likeCounter1').innerHTML));
             }
             if (buttonName === "button2") {
                 count2 += 1
@@ -122,8 +123,11 @@
         const onLoad = () => {
             let json1 = [];
             let json2 = [];
-            let string1="";
-            let string2="";
+            let string1 = "";
+            let string2 = "";
+            let likeNum = JSON.parse(localStorage.getItem('likes')) || 0;
+            
+
             if (localStorage.getItem('comments1')) {
                 json1 = JSON.parse(localStorage.getItem('comments1'));
                 string1 = "";
@@ -143,12 +147,12 @@
                     var obj2 = json2[i];
                     let st2 = JSON.stringify(obj2);
                     string2 += st2;
-                    str
-                    ing2 += "<hr>";
+                    string2 += "<hr>";
                 }
             }
             document.getElementById("comment1").innerHTML = string1;
             document.getElementById("comment2").innerHTML = string2;
+            document.getElementById("likeCounter1").innerHTML = likeNum;
         }
         function comment1() {
             event.preventDefault()

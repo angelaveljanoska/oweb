@@ -191,6 +191,7 @@ body {
     float: top;
     width: 397px;
     height: 400px;
+    display: block;
 }
 
 #table1 {
