@@ -101,8 +101,8 @@
         var guest = prompt("Hello? Is there anybody in there?", "Your name here");
         const button1 = document.getElementById("clickme1")
         const button2 = document.getElementById("clickme2")
-        let count1 = 0
-        let count2 = 0
+        let count1 = Number(JSON.parse(localStorage.getItem('likes1'))) || 0;
+        let count2 = Number(JSON.parse(localStorage.getItem('likes2'))) || 0;
         const likeCounter1 = document.getElementById("likeCounter1")
         const likeCounter2 = document.getElementById("likeCounter2")
         const handleClick = () => {
